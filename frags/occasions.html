@@ -1,0 +1,53 @@
+<section class="section section--dark" id="occasions" aria-labelledby="occasions-title">
+<span class="gridlines" aria-hidden="true"></span>
+<div class="container">
+<div class="section-head">
+<h2 class="h2" id="occasions-title">Корм заканчивается.<br>Забота продолжается.</h2>
+<p class="lead">Гуляш помнит любимый корм, фасовку и историю покупок. Напомните о следующем заказе, пока в миске ещё что-то есть.</p>
+</div>
+<div class="occasions-demo">
+<div class="occasions-col occasions-col--list">
+<div class="occasions-bar">
+<div class="switch" role="group" aria-label="Период" data-crm-range>
+<button type="button" aria-pressed="false" data-value="7">7 дней</button>
+<button type="button" aria-pressed="true" data-value="14">14 дней</button>
+<button type="button" aria-pressed="false" data-value="30">Месяц</button>
+</div>
+<span class="occasions-summary" data-crm-summary></span>
+</div>
+<div class="occasions-segments" data-crm-segments></div>
+<div class="occasions-list" data-crm-list data-lenis-prevent tabindex="0" aria-label="Клиенты и повторные покупки"></div>
+</div>
+<div class="occasions-delivery">
+<div class="push-phone" data-push-phone role="region" aria-label="Предпросмотр уведомления на телефоне">
+<div class="push-phone__island" aria-hidden="true"></div>
+<div class="push-phone__status"><span>9:41</span><span class="push-phone__indicators" aria-hidden="true">
+<svg width="14" height="11" viewBox="0 0 14 11" fill="currentColor"><rect x="0" y="7" width="2.5" height="4" rx=".7"/><rect x="4" y="5" width="2.5" height="6" rx=".7"/><rect x="8" y="2" width="2.5" height="9" rx=".7"/><rect x="12" y="0" width="2" height="11" rx=".7"/></svg>
+<svg width="14" height="11" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M1 3.5a11 11 0 0 1 14 0M4 6.5a6.5 6.5 0 0 1 8 0M7 9.5a2 2 0 0 1 2 0"/></svg>
+<svg width="22" height="11" viewBox="0 0 25 12" fill="none"><rect x=".6" y=".6" width="20.8" height="10.8" rx="2.5" stroke="currentColor" stroke-opacity=".65" stroke-width="1.2"/><rect x="2.5" y="2.5" width="17" height="7" rx="1" fill="currentColor"/><path d="M23 4v4a2 2 0 0 0 0-4" fill="currentColor" fill-opacity=".65"/></svg>
+</span></div>
+<div class="push-phone__date">Понедельник, 26 октября</div>
+<div class="push-phone__time" aria-hidden="true">9:41</div>
+<div class="push-phone__notification" data-phone-notification aria-live="polite"></div>
+<div class="push-phone__home" aria-hidden="true"></div>
+</div>
+<div class="occasions-col occasions-col--push">
+<div class="occasions-push-head">
+<span class="muted small">Шаблон уведомления</span>
+<div class="switch switch--sm" role="group" aria-label="Тип" data-crm-template>
+<button type="button" aria-pressed="true" data-value="remind">Напомнить</button>
+<button type="button" aria-pressed="false" data-value="repeat">Повторить</button>
+<button type="button" aria-pressed="false" data-value="promo">Промо</button>
+</div>
+</div>
+<div class="push-preview" data-crm-push></div>
+<p class="push-delivery-status" data-phone-hint>Выберите клиента и отправьте push</p>
+<button class="btn btn--cyan" type="button" data-crm-send disabled>Отправить push</button>
+</div>
+</div>
+ </div>
+<div class="cta-row" style="margin-top:48px">
+<a class="btn btn--light" href="#connect" data-cta-context="Хочу напоминания о повторной покупке">Настроить повторные покупки <svg aria-hidden="true"><use href="#i-chevron"/></svg></a>
+</div>
+</div>
+</section>

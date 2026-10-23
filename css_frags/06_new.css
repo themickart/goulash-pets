@@ -1,0 +1,140 @@
+/* === logo__badge (вместо logo__tag pixel) ================================ */
+.logo__mark{width:36px;height:36px;flex:none}
+.logo__text{font-weight:500;font-size:17px;letter-spacing:-0.01em}
+.logo__badge{display:inline-flex;align-items:center;gap:3px;padding:3px 8px 3px 6px;font-size:12px;font-weight:500;color:var(--g-black);background:var(--pet-orange);border-radius:6px;line-height:1;white-space:nowrap}
+.logo__badge svg{width:6px;height:10px;flex:none;color:rgba(4,4,6,.5)}
+
+/* убираем старый logo__tag если остался */
+.logo__tag{display:none}
+
+/* === pain--dark-contrast (вместо pain--light с белым текстом) ============ */
+.pain--dark-contrast{background:var(--g-dark-card);color:var(--g-od-primary)}
+.pain--dark-contrast .pain__title{color:var(--g-od-primary)}
+.pain--dark-contrast .pain__text{color:var(--g-od-secondary)}
+.pain--dark-contrast .pain__fix{color:var(--g-od-secondary)}
+.pain--dark-contrast .pain__fix b{color:var(--g-od-primary)}
+.pain__value pixel{color: #040406;}
+.pain.pain--narrow,
+.pain.pain--narrow p,
+.pain.pain--narrow span,
+.pain__fix,
+.pain__title,
+.pain.pain--narrow div {color: #040406;}
+
+/* === demo-tabs / demo-panel ============================================== */
+.demo-tabs{display:flex;gap:0;border-bottom:2px solid var(--g-line-on-light);margin-bottom: 20px;}
+.demo-tab{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;font-size:15px;font-weight:500;color:var(--g-ol-tertiary);background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;cursor:pointer;transition:color var(--g-dur),border-color var(--g-dur)}
+.demo-tab svg{width:18px;height:18px;flex:none}
+.demo-tab:hover{color:var(--g-ol-primary)}
+.demo-tab.is-active{color:var(--g-ol-primary);border-bottom-color:var(--pet-orange)}
+
+.demo-panel{display:none;flex-direction:column;border:1px solid var(--g-line-on-light);border-top:none;border-radius:0 0 var(--g-r-xl) var(--g-r-xl);overflow:hidden;background:var(--g-light-secondary)}
+.demo-panel.is-active{display:flex}
+.demo-panel[hidden]{display:none!important}
+
+.demo-panel__head{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:14px 20px;background:var(--g-light-primary);border-bottom:1px solid var(--g-line-on-light)}
+.demo-panel__kpis{display:flex;gap:0;flex:1;min-width:0}
+.demo-panel__actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-left:auto}
+
+.demo-kpi{padding:6px 16px;border-right:1px solid var(--g-line-on-light);display:flex;flex-direction:column;gap:2px}
+.demo-kpi:first-child{padding-left:0}
+.demo-kpi:last-child{border-right:none}
+.demo-kpi__val{font-size:22px;font-weight:500;color:var(--g-ol-primary);font-variant-numeric:tabular-nums;line-height:1}
+.demo-kpi__label{font-size:11px;color:var(--g-ol-tertiary);text-transform:uppercase;letter-spacing:.03em}
+.demo-kpi--warn .demo-kpi__val{color:var(--g-error)}
+
+/* board внутри demo-panel */
+.demo-panel .board{flex:1;min-height:260px;max-height:360px;border-radius:0}
+
+/* mapwrap внутри demo-panel */
+.demo-panel .mapwrap{min-height:300px;background:#eef0e8}
+
+/* stock внутри demo-panel */
+.demo-panel .stock__list{max-height:none;padding:16px 20px}
+.demo-panel .stock__summary{padding:10px 20px;border-top:1px solid var(--g-line-on-light)}
+
+/* range-label */
+.range-label{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--g-ol-secondary);cursor:pointer;flex-wrap:wrap}
+.range-label input[type="range"]{accent-color:var(--pet-orange);width:100px}
+
+/* === footer__wordmark ================================================== */
+.footer{padding-bottom:0!important;overflow:hidden}
+.footer .container{padding-bottom:0}
+.footer__wordmark{display:flex;justify-content:center;padding-inline:var(--g-gutter);font-size:clamp(48px,15vw,260px);font-weight:500;height:0.82em;overflow:hidden;margin-top:12px}
+.footer__wordmark span{display:block;line-height:1;letter-spacing:-0.04em;background:linear-gradient(180deg,rgba(255, 122, 36,.35) 0%,var(--g-dark-primary) 80%);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap;user-select:none}
+
+/* === pain__value цвет ====================================================
+   В тёмных секциях pain__value уже имеет цвет через .pain--dark .pain__value,
+   но в section--dark карточки pain по умолчанию светлые (белые) — текст тёмный.
+   Явно задаём цвет для pain__value в светлых и тёмных карточках */
+/* pain__value: явные цвета только для конкретных модификаторов, без перебивания section--dark */
+.pain--accent .pain__value{color:var(--pet-orange)}
+/* В тёмной секции: белые карточки с тёмным текстом — оставляем как есть,
+   только тёмно-контрастная (4-я карточка) имеет явный белый текст */
+.pain--dark-contrast{background:var(--g-dark-card)!important;border-color:var(--g-dark-card)!important;color:var(--g-od-primary)!important}
+.pain--dark-contrast .pain__value,.pain--dark-contrast .pain__title{color:var(--g-od-primary)!important}
+.pain--dark-contrast .pain__text,.pain--dark-contrast .pain__fix{color:var(--g-od-secondary)!important}
+.pain--dark-contrast .pain__fix b{color:var(--g-od-primary)!important}
+
+/* === video chapters из HTML атрибутов (JS читает data-at, data-time etc) = */
+/* chapter существует как обычный button — стили уже есть в базе */
+
+/* === знак-светофор в герое (sign) ======================================= */
+/* Корпус знака и перспективное размещение canvas */
+
+/* === chapter без иконок — только время + текст =========================== */
+/* Скрываем chapter__icon если он есть, показываем только время + название */
+.chapter__icon{display:none!important}
+.chapter{padding:20px 20px 16px 0}
+.chapter__time{display:block;font-size:16px;margin-bottom:4px;color:inherit}
+.chapter__title{font-size:15px;font-weight:500}
+/* aria-pressed="true" = активная глава */
+.chapter[aria-pressed="true"]{color:var(--g-ol-primary)}
+.chapter[aria-pressed="true"] .chapter__time{color:var(--g-ol-primary)}
+.section--white .chapter[aria-pressed="true"]{color:var(--g-ol-primary)}
+
+/* === order-card прогресс-бар (Мастерская) ================================ */
+.order-card__progress{height:3px;background:var(--g-line-on-light);border-radius:2px;margin-top:8px;overflow:hidden}
+.order-card__progress-fill{height:100%;background:var(--g-cyan);border-radius:2px;width:0%;transition:width 0.4s ease}
+.order-card__progress-fill.is-done{background:var(--g-green)}
+.order-card--new{animation:card-appear 0.35s ease}
+@keyframes card-appear{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+/* === Карта Екатеринбурга (ekb-map) ======================================= */
+.ekb-map-wrap{position:relative;flex:1;overflow:hidden;background:#111214;min-height:340px;cursor:default}
+.ekb-map-wrap canvas{position:absolute;inset:0;width:100%;height:100%}
+.ekb-map-info{position:absolute;top:12px;left:12px;display:flex;flex-direction:column;gap:6px;pointer-events:none;z-index:2}
+.ekb-map-badge{background:rgba(4,4,6,.75);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:6px 12px;font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap}
+.ekb-map-badge b{color:#fff}
+.ekb-map-credit{position:absolute;bottom:8px;right:10px;font-size:10px;color:rgba(255,255,255,.3);pointer-events:none}
+
+/* === Склад — layout ====================================================== */
+.demo-panel[data-widget="stock"]{background:var(--g-light-secondary)}
+.demo-panel[data-widget="stock"] .demo-panel__head{flex-wrap:wrap;row-gap:10px}
+.demo-panel[data-widget="stock"] .stock__list{padding:0 20px 0;max-height:320px;overflow-y:auto}
+.demo-panel[data-widget="stock"] .stock__row{display:grid;grid-template-columns:16px 1fr auto;align-items:center;gap:6px 10px;padding:10px 0;border-bottom:1px solid var(--g-line-on-light);font-size:14px;color:var(--g-ol-primary)}
+.demo-panel[data-widget="stock"] .stock__row:last-child{border-bottom:none}
+.demo-panel[data-widget="stock"] .stock__name{font-weight:500}
+.demo-panel[data-widget="stock"] .stock__sub{font-size:12px;color:var(--g-ol-tertiary);grid-column:2}
+.demo-panel[data-widget="stock"] .stock__qty{font-variant-numeric:tabular-nums;font-weight:500;white-space:nowrap;text-align:right}
+.demo-panel[data-widget="stock"] .stock__summary{background:var(--g-light-primary);padding:12px 20px;border-top:1px solid var(--g-line-on-light);font-size:13px;color:var(--g-ol-secondary);margin:0}
+
+/* === Responsive for new components ====================================== */
+.demo-tabs {
+    margin-bottom: 0;
+    padding-bottom: 12px;
+}
+
+
+@media(max-width:1024px){
+  .demo-tab{padding:10px 14px;font-size:14px;}
+}
+@media(max-width:767px){
+  .demo-tabs{overflow-x:auto;-webkit-overflow-scrolling:touc; margin-bottom: 0; padding-bottom: 12px;}
+  .demo-tab{white-space:nowrap;padding:10px 12px;font-size:13px}
+  .demo-panel__head{flex-direction:column;align-items:flex-start}
+  .demo-panel__actions{margin-left:0;width:100%}
+  .demo-kpi__val{font-size:18px}
+  .footer__wordmark{height:1em;font-size:clamp(36px,12vw,180px)}
+  .logo__text{font-size:15px}
+}

@@ -1,0 +1,92 @@
+<section class="section section--white" id="demo" aria-labelledby="demo-title">
+<span class="gridlines" aria-hidden="true"></span>
+<div class="container">
+<div class="section-head">
+<h2 class="h2" id="demo-title">Три экрана кабинета — попробуйте сами</h2>
+<p class="lead">Данные выдуманы, но кнопки, фильтры и переключатели работают по-настоящему.</p>
+</div>
+<div class="demo-tabs" role="tablist" aria-label="Экраны кабинета">
+<button class="demo-tab is-active" role="tab" aria-selected="true" aria-controls="tab-workshop" data-tab="workshop">
+<svg aria-hidden="true"><use href="#i-package"/></svg>Сборка заказов
+</button>
+<button class="demo-tab" role="tab" aria-selected="false" aria-controls="tab-couriers" data-tab="couriers">
+<svg aria-hidden="true"><use href="#i-route"/></svg>Маршруты
+</button>
+<button class="demo-tab" role="tab" aria-selected="false" aria-controls="tab-stock" data-tab="stock">
+<svg aria-hidden="true"><use href="#i-warehouse"/></svg>Склад
+</button>
+</div>
+
+<!-- === Экран 1: Сборка заказов === -->
+<div class="demo-panel is-active" id="tab-workshop" role="tabpanel" data-widget="workshop">
+<div class="demo-panel__head">
+<div class="demo-panel__kpis">
+<div class="demo-kpi"><span class="demo-kpi__val" data-ws-kpi="active">—</span><span class="demo-kpi__label">в работе</span></div>
+<div class="demo-kpi"><span class="demo-kpi__val" data-ws-kpi="avg">—</span><span class="demo-kpi__label">ср. сборка</span></div>
+<div class="demo-kpi"><span class="demo-kpi__val" data-ws-kpi="ontime">—</span><span class="demo-kpi__label">в срок</span></div>
+</div>
+<div class="demo-panel__actions">
+<div class="chips" role="group" aria-label="Канал заказа" data-ws-filters></div>
+<button class="btn btn--cyan btn--sm" type="button" data-ws-add>+ Новый заказ</button>
+</div>
+</div>
+<div class="board" data-ws-board data-lenis-prevent></div>
+<p class="demo-panel__hint" data-ws-message role="status">Нажмите на заказ, чтобы передать его в сборку, а затем отметить готовым.</p>
+</div>
+
+<!-- === Экран 2: Маршруты — карта Екатеринбурга из OSM === -->
+<div class="demo-panel" id="tab-couriers" role="tabpanel" data-widget="couriers" hidden>
+<div class="demo-panel__head">
+<div class="demo-panel__kpis">
+<div class="demo-kpi"><span class="demo-kpi__val" data-ekb-kpi="orders">—</span><span class="demo-kpi__label">заказов за смену</span></div>
+<div class="demo-kpi"><span class="demo-kpi__val" data-ekb-kpi="couriers">—</span><span class="demo-kpi__label">курьеров</span></div>
+<div class="demo-kpi"><span class="demo-kpi__val" data-ekb-kpi="avg">—</span><span class="demo-kpi__label">доставка</span></div>
+</div>
+<div class="demo-panel__actions">
+<div class="switch" role="group" aria-label="Режим" data-ekb-mode>
+<button type="button" aria-pressed="true" data-value="auto">Гуляш</button>
+<button type="button" aria-pressed="false" data-value="manual">Вручную</button>
+</div>
+</div>
+</div>
+<div class="ekb-map-wrap" data-ekb-map>
+<canvas data-ekb-canvas></canvas>
+<div class="ekb-map-info">
+<div class="ekb-map-badge">📍 <b>Екатеринбург</b> · ул. Малышева, 36</div>
+<div class="ekb-map-badge" data-ekb-status>Загрузка карты…</div>
+</div>
+<div class="ekb-map-credit">Данные карты © участники OpenStreetMap</div>
+</div>
+</div>
+
+<!-- === Экран 3: Склад === -->
+<div class="demo-panel" id="tab-stock" role="tabpanel" data-widget="stock" hidden>
+<div class="demo-panel__head">
+<div class="demo-panel__kpis">
+<div class="stock__legend">
+<span><span class="fresh__dot" style="background:#b1ec52"></span>В наличии</span>
+<span><span class="fresh__dot" style="background:#ffd23f"></span>Пополнить</span>
+<span><span class="fresh__dot" style="background:#ff924f"></span>Заканчивается</span>
+<span><span class="fresh__dot" style="background:#4a4a4a"></span>Нет на складе</span>
+</div>
+</div>
+<div class="demo-panel__actions">
+<div class="stock-days">
+<label class="range-label" for="stock-day"><span>Прогноз остатков</span><output for="stock-day" data-stock-day-label>Сегодня</output></label>
+<input id="stock-day" type="range" min="0" max="5" step="1" value="0" data-stock-day aria-label="День прогноза" aria-valuetext="Сегодня">
+<div class="stock-days__ticks" role="group" aria-label="Выбрать день прогноза">
+<button type="button" data-stock-select="0" aria-pressed="true">Сегодня</button><button type="button" data-stock-select="1" aria-pressed="false">+1</button><button type="button" data-stock-select="2" aria-pressed="false">+2</button><button type="button" data-stock-select="3" aria-pressed="false">+3</button><button type="button" data-stock-select="4" aria-pressed="false">+4</button><button type="button" data-stock-select="5" aria-pressed="false">+5 дней</button>
+</div>
+</div>
+</div>
+</div>
+<div class="stock__list" data-stock-list data-lenis-prevent></div>
+<p class="stock__summary" data-stock-summary></p>
+</div>
+
+</div>
+<div class="cta-row" style="margin-top:48px; position:relative; left:50%; transform:translateX(-50%);">
+<a class="btn btn--dark" href="#connect" data-cta-context="Хочу кабинет для своего магазина">Хочу кабинет для своего магазина <svg aria-hidden="true"><use href="#i-chevron"/></svg></a>
+</div>
+</div>
+</section>

@@ -1,0 +1,29 @@
+<section class="section section--white" id="how" aria-labelledby="how-title">
+<span class="gridlines" aria-hidden="true"></span>
+<div class="container">
+<div class="section-head">
+<h2 class="h2" id="how-title">От пустой миски до заказа у двери</h2>
+<p class="lead">Сайт принимает заказ, магазин собирает товары, курьер едет по маршруту. Клиент видит каждый шаг.</p>
+</div>
+<!-- data-at = H:MM:SS:FF (60 fps); data-time is the displayed delivery time. -->
+<div class="film film--pets" data-film data-film-fps="60">
+<video data-film-video muted playsinline loop preload="metadata" poster="assets/video/poster.jpg">
+<source src="assets/video/goulash-pets.mp4" type="video/mp4">
+</video>
+<div class="film__fallback" data-film-fallback hidden>
+<img class="film__pet-poster" src="assets/video/poster.jpg" alt="Хозяйка с собакой оформляет заказ в зоомагазине">
+</div>
+<span class="film__shade" aria-hidden="true"></span>
+<div class="film__clock" aria-live="off"><span class="film__clock-time pixel" data-film-time>00 мин</span><span class="film__clock-label">с момента<br>заказа</span></div>
+<div class="film__toast" data-film-toast><span class="film__toast-icon" data-film-icon><svg aria-hidden="true"><use href="#i-receipt"/></svg></span><span><span class="film__toast-title" data-film-title>Заказ принят</span><br><span class="film__toast-text" data-film-text>Корм для кота · 2 кг · доставка сегодня</span></span></div>
+<button class="film__play" type="button" data-film-play aria-label="Приостановить видео"><svg aria-hidden="true"><use href="#i-pause"/></svg></button>
+</div>
+<div class="chapters" role="group" aria-label="Этапы доставки">
+<button class="chapter" type="button" data-at="0:00:00:00" data-time="00 мин" data-title="Заказ принят" data-text="Корм и наполнитель · заказ оплачен" data-icon="#i-receipt" aria-pressed="true"><span class="chapter__time">0 мин</span><span class="chapter__title">Заказ принят</span></button>
+<button class="chapter" type="button" data-at="0:00:02:40" data-time="05 мин" data-title="Собираем товары" data-text="Проверяем состав, упаковку и срок годности" data-icon="#i-package" aria-pressed="false"><span class="chapter__time">05 мин</span><span class="chapter__title">Сборка заказа</span></button>
+<button class="chapter" type="button" data-at="0:00:06:00" data-time="12 мин" data-title="Маршрут назначен" data-text="Учитываем адрес, вес заказа и окно доставки" data-icon="#i-route" aria-pressed="false"><span class="chapter__time">12 мин</span><span class="chapter__title">Маршрут готов</span></button>
+<button class="chapter" type="button" data-at="0:00:09:30" data-time="18 мин" data-title="Курьер в пути" data-text="Везём корм, наполнитель и немного радости" data-icon="#i-truck" aria-pressed="false"><span class="chapter__time">18 мин</span><span class="chapter__title">Курьер в пути</span></button>
+<button class="chapter" type="button" data-at="0:00:12:40" data-time="45 мин" data-title="Заказ доставлен" data-text="Миска полная · хвост доволен" data-icon="#i-paw" aria-pressed="false"><span class="chapter__time">45 мин</span><span class="chapter__title">Уже у двери</span></button>
+</div>
+<div class="cta-row" style="margin-top:48px;justify-content:center"><a class="btn btn--dark" href="#connect" data-cta-context="Хочу организовать доставку из зоомагазина">Хочу такую же систему <svg aria-hidden="true"><use href="#i-chevron"/></svg></a><a class="btn btn--outline-dark" href="#demo">Попробовать кабинет</a></div>
+</div></section>

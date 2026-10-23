@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" fill="none">
+<defs><linearGradient id="bg" x2="1200" y2="675" gradientUnits="userSpaceOnUse"><stop stop-color="#152027"/><stop offset="1" stop-color="#293b3b"/></linearGradient><linearGradient id="box" x1="650" y1="330" x2="1020" y2="630" gradientUnits="userSpaceOnUse"><stop stop-color="#ffc98e"/><stop offset="1" stop-color="#ed9d55"/></linearGradient><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#e8f3f0" fill-opacity=".07"/></pattern></defs>
+<path fill="url(#bg)" d="M0 0h1200v675H0z"/><path fill="url(#dots)" d="M0 0h1200v675H0z"/>
+<circle cx="930" cy="330" r="256" fill="#ff7a24" fill-opacity=".07"/><circle cx="930" cy="330" r="220" stroke="#ffab6e" stroke-opacity=".13"/><circle cx="930" cy="330" r="286" stroke="#00ffff" stroke-opacity=".1" stroke-dasharray="4 12"/>
+<ellipse cx="900" cy="599" rx="227" ry="22" fill="#0b1417" fill-opacity=".4"/>
+<!-- Orange cat, behind a shopping parcel. -->
+<path d="m708 260-16-129 109 62m126 53 26-114-108 63" fill="#ff8c40" stroke="#ffb77e" stroke-width="5" stroke-linejoin="round"/>
+<path d="m714 226-6-58 52 39m165 18 15-58-55 40" fill="#c75b25"/>
+<ellipse cx="819" cy="279" rx="124" ry="112" fill="#ff9d54"/>
+<path d="M820 172c-31 54-21 100 0 117 22-19 30-64 3-117" fill="#fff0d5"/>
+<path d="M761 271c9-14 19-14 28 0m65 0c9-14 19-14 28 0" stroke="#26332e" stroke-width="7" stroke-linecap="round"/>
+<path d="m806 296 14 12 14-12Z" fill="#8d482a"/><path d="M820 308v13m0 0c-13 11-25 11-35 2m35-2c13 11 25 11 35 2" stroke="#8d482a" stroke-width="4" stroke-linecap="round"/>
+<path d="m734 299-42-8m42 24-46 6m218-22 40-8m-40 24 45 6" stroke="#ffdfb6" stroke-width="4" stroke-linecap="round"/>
+<!-- Floppy-eared dog. -->
+<path d="M999 255c-44-12-71 10-70 66l12 82 42-18m97-133c40-7 67 16 61 68l-15 72-40-15" fill="#b77d58"/>
+<ellipse cx="1040" cy="330" rx="78" ry="86" fill="#e7bb86"/>
+<path d="M1034 249c-23 34-23 73 5 88 28-17 29-53 9-88" fill="#fff0d5"/>
+<ellipse cx="1012" cy="322" rx="7" ry="9" fill="#26332e"/><ellipse cx="1071" cy="322" rx="7" ry="9" fill="#26332e"/>
+<ellipse cx="1041" cy="359" rx="36" ry="29" fill="#fff0d5"/><path d="M1029 350c0-9 25-9 25 0 0 6-9 12-13 12s-12-6-12-12" fill="#26332e"/>
+<path d="M1041 362v10m-17 1c10 10 26 10 35 0" stroke="#7d543c" stroke-width="4" stroke-linecap="round"/>
+<path d="M992 400c29 16 66 16 95-1" stroke="#00d8d3" stroke-width="16" stroke-linecap="round"/>
+<!-- Parcel and its paw mark. -->
+<path d="m690 419 137-62 197 66-134 69Z" fill="#ffe2b9"/><path d="M690 419v138l200 63V492Z" fill="url(#box)"/><path d="m890 492 134-69v139l-134 58Z" fill="#cf803f"/>
+<path d="m762 387 196 69-28 15-196-70Z" fill="#f3bf7f"/><path d="M805 457v111" stroke="#ffdfb5" stroke-width="28"/>
+<g fill="#754523" transform="translate(846 523) rotate(16) scale(.9)"><ellipse cx="-20" cy="0" rx="7" ry="10" transform="rotate(-20 -20 0)"/><ellipse cx="-5" cy="-9" rx="7" ry="10"/><ellipse cx="12" cy="-6" rx="7" ry="10" transform="rotate(15 12 -6)"/><ellipse cx="26" cy="6" rx="7" ry="10" transform="rotate(25 26 6)"/><path d="M-17 26c0-10 12-24 23-24s24 16 24 25c0 16-16 8-24 8s-23 7-23-9Z"/></g>
+<path d="m725 563 46 14" stroke="#fff0d5" stroke-width="5" stroke-linecap="round"/>
+<circle cx="1083" cy="152" r="33" fill="#00e6e1"/><path d="m1069 152 10 10 18-20" stroke="#183d3b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
